@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="content_select">
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+    <button id="find" onclick="findcontinent()">Find Continent</button>
+</body>
+
+</html>
+<script>
+    function findcontinent() {
+        var country = document.getElementById("content_select").value;
+
+        if (country == "India" || country == "China" || country == "Nepal" ||country=="Singapore") { //Asia
+            alert("The continent is Asia");
+        }
+        else if (country == "United States of America" || country =="Canada" || country == "Mexico")  //North Amrica
+        {
+                alert("The continent is North America");
+
+        }
+        else if(country =="Australia"){
+            alert("The continent is Oceania");
+
+        }
+        else if(country =="Argentina" || country=="Brazil"){  //South America
+                    alert("The continent is South America");
+        }
+        else if(country =="France" ||country =="Sweden" || country=="Germany") //Euorope
+        {
+                    alert("The continent is Euorope");
+        }
+        else if(country =="South Africa" || country =="Nigeria"){   //africa 
+                alert("The continent is Africa");
+        }
+    }
+</script>

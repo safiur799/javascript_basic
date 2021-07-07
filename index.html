@@ -1,0 +1,237 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Note Taking App</h1>
+    <select  id="day">
+        <option value="Day1">Day 1</option>
+        <option value="Day1">Day 2</option>
+        <option value="Day1">Day 3</option>
+        <option value="Day1">Day 4</option>
+    </select>
+    <input onkeypress="addNote(event)" type="text" id="note"/>
+</body>
+</html>
+<script>
+  function addNote(e){
+      var notes={
+        day1:[],
+        day2:[],
+        day3:[],
+        day4:[]
+      }
+
+
+    if(e.key ==="Enter"){
+        var note =document.getElementById("note").value;
+        var day  = document.getElementById("day").value;
+        
+        if(day =="Day1"){
+            notes.day1.push(note);
+        }
+        else if(day =="Day2"){
+            notes.day2.push(note);
+        }
+    }
+  }
+</script> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    #world{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        gap:10%;
+        padding:5%;
+    }
+    #country{
+        height: 200px;
+        border:1px solid black;
+    }
+</style>
+<body>
+    <h1>world map guide</h1>
+    <div id="world">
+        <div id="country">India</div>
+        <div id="country"><!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        
+        </head>
+        <style>
+            #world {
+                display: grid;
+                grid-template-columns: 40% 40%;
+                gap: 10%;
+                padding: 5%;
+            }
+        
+            #country {
+                height: 200px;
+                border: 1px solid black;
+            }
+        </style>
+        
+        <body>
+            <h1>world map guide</h1>
+            <div id="world">
+                <div id="country">India</div>
+                <div id="country">Australia</div>
+                <div id="country">USA</div>
+                <div id="country">Brazil</div>
+        
+            </div>
+        </body>
+        
+        </html>
+        <script>
+            function addListners(){
+                var countries = document.querySelectorAll("#country");
+                for(let i=0; i<countries.length; i++){
+                    countries[i].addEventListener("mouseover",function(){
+                        alert(`you are in ${countries[i].innerHTML}`);
+                    })
+                }
+            }
+            addListners();
+        </script>Australia</div>
+        <div id="country">USA</div>
+        <div id="country">Brazil</div>   
+
+    </div>
+</body>
+</html>
+<script>
+    function addListners(){
+        var countries = document.querySelectorAll("#country");
+        for(let i=0; i<countries.length; i++){
+            countries[i].addEventListener("mouseover",function(){
+                alert(`you are in ${countries[i].innerHTML}`);
+            })
+        }
+    }
+    addListners();
+</script> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #album{
+        display: grid;
+        padding: 5%;
+        grid-template-columns: repeat(4,20%);
+        gap: 5%;
+    }
+    img{
+        width: 70%;
+    }
+</style>
+<body>
+    <h1>Photo Album</h1>
+    <input type="text" id="url"/>
+    <button onclick="addImage()">addImage</button>
+    <div id="album"></div>
+</body>
+</html>
+<script>
+    // we problem 
+    //1.empty album, container
+    //2.photos
+    //3.we need images,we need image url
+    //4.we need to accept a url from user, input tag
+    //we need to create image
+    var album_div = document.getElementById("album");
+    
+    function addImage(){
+        var url =document.getElementById("url").value;
+        var img =document.createElement("img");
+        img.setAttribute("src",url);
+        album_div.append(img);
+    }
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #products{
+        display: grid;
+        padding: 5%;
+        grid-template-columns:repeat(4,20%);
+        gap: 5%;
+    }
+    img{
+        width: 100%;
+    }
+</style>
+<body>
+    <h1>Online Store</h1>
+    <form onsubmit="addProduct(event)">
+        <input type="text" placeholder="Name" id="name"/>
+        <input type="text" placeholder="URL" id="url"/>
+        <input type="text" placeholder="Price" id="price"/>
+
+        <input type="submit"/>
+
+    </form>
+    <div id="products">
+
+    </div>
+</body>
+</html>
+<script>
+    var product = document.getElementById("products")
+    //we problem 3 - Create online store 
+    function addProduct(e){
+        e.preventDefault();
+
+        var name =document.getElementById("name").value;//get value
+        var p = document.createElement("p");//create element
+        p.innerText=name;//set value
+
+
+        var url = document.getElementById("url").value;
+        var image = document.createElement("img");
+        image.setAttribute("src",url);
+
+        var price = document.getElementById("price").value;
+        var price_p = document.createElement("p");
+        price_p.innerHTML=price;
+
+        var div = document.createElement("div");
+        div.append(image,p,price);
+        products.append(div);
+    }
+</script>
