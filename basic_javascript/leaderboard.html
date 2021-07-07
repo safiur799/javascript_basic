@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <div id="parent">
+        <div>
+        <div id="child1" class="class2">43</div>
+        <span class="class3">max</span>
+        </div>
+        <div>
+        <div id="child2" class="class2">2019</div>
+        <span class="class3">min</span>
+        </div>
+        
+        
+    </div>
+    <div id="child100">
+    <div id="child3" class="class9">#</div>
+    </div>
+    <div id="cal">
+        <div onclick="shownum(1)" id="id4" class="class1">1</div>
+        <div onclick="shownum(2)" id="id5" class="class1">2</div>
+        <div onclick="shownum(3)" id="id6" class="class1">3</div>
+        <div onclick="shownum(4)" id="id7" class="class1">4</div>
+        <div onclick="shownum(5)" id="id8" class="class1">5</div>
+        <div onclick="shownum(6)" id="id9" class="class1">6</div>
+        <div onclick="shownum(7)" id="id10" class="class1">7</div>
+        <div onclick="shownum(8)" id="id11" class="class1">8</div>
+        <div onclick="shownum(9)" id="id12" class="class1">9</div>
+        <div onclick="shownum(0)" id="id13" class="class1">0</div> 
+    </div>
+    <button onclick="showminmax()" id="last">Enter</button>
+</body>
+</html>
+<script>
+    var value =0;
+    var count=0;
+    var min=10000000;
+    var max=0;
+   function shownum(msg){
+      var val = document.getElementById("child3");
+      var div = document.getElementById("child3");
+      var h1=document.createElement("h1");
+      h1.innerHTML=msg;
+      count++;
+      if(count>1){
+        value = value*10+msg;
+      }
+      else{
+          value =msg;
+      }
+     
+      div.appendChild(h1);
+
+   }
+   function showminmax(){
+       if(value>max){
+            document.getElementById("child1").innerHTML=value;
+            max=value;
+           
+       }
+       if(min>value){
+           document.getElementById("child2").innerHTML=value;
+           min=value;
+       }
+       document.getElementById("child3").innerHTML="#";
+       count=0;
+       value=0;
+       
+   }
+</script>
