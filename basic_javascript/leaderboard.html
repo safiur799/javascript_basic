@@ -20,8 +20,11 @@
         
         
     </div>
+    <span class="class18">score</span>  
     <div id="child100">
-    <div id="child3" class="class9">#</div>
+       
+    <div id="child3" class="class9"></div>
+    
     </div>
     <div id="cal">
         <div onclick="shownum(1)" id="id4" class="class1">1</div>
@@ -43,6 +46,11 @@
     var count=0;
     var min=10000000;
     var max=0;
+    var data ={
+        first:[],
+        second:[]
+    };
+    
    function shownum(msg){
       var val = document.getElementById("child3");
       var div = document.getElementById("child3");
@@ -61,17 +69,27 @@
    }
    function showminmax(){
        if(value>max){
-            document.getElementById("child1").innerHTML=value;
-            max=value;
+           
+             data.first[0]=value;
+          
+            var k=data.first[0];
+            max=data.first[0];
+            document.getElementById("child1").innerHTML=k;
+          
            
        }
        if(min>value){
-           document.getElementById("child2").innerHTML=value;
-           min=value;
+           data.second[0]=value;
+         var k = data.second[0];
+         min=data.second[0];
+        document.getElementById("child2").innerHTML =k;
+        
        }
-       document.getElementById("child3").innerHTML="#";
+       document.getElementById("child3").innerHTML="";
+       
        count=0;
        value=0;
        
    }
+   
 </script>
