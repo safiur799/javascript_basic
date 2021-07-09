@@ -177,7 +177,7 @@
     }
 </script> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -234,4 +234,184 @@
         div.append(image,p,price);
         products.append(div);
     }
+</script> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>change the color</h1>
+    <button id="first">chang my color</button>
+</body>
+</html>
+<script>
+    var btn =document.getElementById("first");
+    function random1(number) {
+        return Math.floor(Math.random() * number);
+    }
+    function function1(){
+        return 'rgb(' + random1(255) + ',' + random1(255) + ',' + random1(255) + ')';
+    }
+    btn.addEventListener('click',function1());
+</script> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //datatype
+    //excution 
+     var a= 20;              
+     var b="Safiur Rhaman"
+     var flag = true;      
+     
+      var arr=[2,3,5,6];
+      var data={
+          name:"Safiur Rahaman",
+          age:22,
+          gender:"Male",
+          address:"West Bengal"
+      }
+
+
+    //hoisting
+    var a;
+    var b;
+    var funciotn;
+    var data = {};
+    var arr=[];
+
+    //stack
+     
+    //declaration
+    var a;
+    var b;
+    var c;
+    var data2={
+
+    }
+    var arr=[];
+    var d;
+    //reassignment
+    var a=20;
+    a=30;//reassingment
+
+    //mutability
+    var a="safi"
+    var a[0]="m"
+    var mutability={
+        name:"Rahaman"
+    }
+    var changeValue = mutability;
+    changeValue.name="Safiur";
+    var arr=[1,2,3];
+    arr[0]=200;
+</script> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+       /* // function Newspaper(h){
+        //     this.publication = "BCC";
+        //     this.headline = h;
+        // }
+        // var n1 = new Newspaper("Petrol 120");
+        // for(var i=0; i<10;i++){
+        //     var n1=new Newspaper("perform 120");
+        //     console.log(n1)
+        // }
+        // var x =new String("raj");
+        // console.log(x.toString());
+        function Persion(n,a){
+            this.name = n;
+            this.age = a;
+        }
+        var p1 =new Persion("raj",22);
+        function Teacher(n,a,s){
+            Persion.call(this,n,a)
+            this.subject = s;
+        }
+        var t1 = new Teacher("raj",24,"js")
+        console.log(t1);
+        function Player() {
+                this.name = n;
+                this.age = a;
+                this.sport = s;
+            }
+         */
+            
+
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.done{
+    text-decoration: line-through;
+    color: green;
+}
+</style>
+<body>
+    <h1>Todo List</h1>
+    <input type ="text" id="inp">
+    <button onclick="addTask()">Add Task </button>
+    <div id="tasks"></div>
+    
+    
+</body>
+</html>
+<script>
+        var tasks = document.getElementById("tasks");
+        var id=0;
+function addTask(){
+    var div =document.createElement("div");
+    var task = document.getElementById("inp").value;
+    id=id+1;
+    div.innerHTML = `<p id=${id}>${task}</p><button onclick="Done(${id})">done</button><button onclick="remove(${id})">remobe</button>`;
+    tasks.append(div);
+    
+}
+    function Done(i) {
+        var clicked_p =document.getElementById(i)
+        clicked_p.setAttribute("class","done")
+
+    }
+function remove(i){
+    var clicked_p = document.getElementById(i)
+   
+    var div=clicked_p.parentElement;
+
+    div.remove();
+}
 </script>
