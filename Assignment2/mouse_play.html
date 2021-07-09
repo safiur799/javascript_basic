@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 400px;
+        width:600px;
+        background-color: skyblue;
+    }
+    #id1{
+        margin-top: 300px;
+        margin-left: 340px;
+        height:60px;
+        width:200px;
+        background-color: red;
+    }
+</style>
+<body id="bodyid">
+    <div id="first">
+    <input type="submit" id="id1">
+    </div>
+    
+</body>
+</html>
+<script>
+    var btn = document.getElementById("first");
+    var btn2 = document.getElementById("bodyid");
+
+    function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+
+        function switchColor() {
+            console.log("colorChange")
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        }
+
+   function btnColorChange(){
+        var color_val=switchColor();
+        document.getElementById("id1").style.backgroundColor=color_val;
+    }
+   btn.addEventListener('mouseover',btnColorChange);
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bodytag">
+    <p>Resize the browser window to fire the <code>resize</code> event.</p>
+    <p>Window height: <span id="height"></span></p>
+    <p>Window width: <span id="width"></span></p>
+    
+</body>
+</html>
+<script>
+    const heightOutput = document.querySelector('#height');
+    const widthOutput = document.querySelector('#width');
+    const bodytag      = document.querySelector('#bodytag');
+    function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+        function randomColor() {
+            return 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        }
+
+    function reportWindowSize() {
+        heightOutput.textContent = window.innerHeight;
+        widthOutput.textContent = window.innerWidth;
+        bodytag.style.backgroundColor = randomColor();
+        
+    }
+
+    window.onresize = reportWindowSize;
+</script>

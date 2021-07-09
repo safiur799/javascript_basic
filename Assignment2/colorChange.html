@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Change the buttons text color random value</h1>
+    <button onclick="colorChange()">Click here to change my color</button>
+    <button onclick="colorChange2()" id="btn">Click me to change my color</button>
+
+</body>
+</html>
+<script>
+    var arr=["red","green","blue","black","teal","violate","Aqua","AliceBlue","Bisque","BlueViolet","Chocolate"];
+    var j=0;
+    function random(number){
+        return Math.floor(Math.random()*number);
+    }
+    function randomColor(){
+        return 'rgb('+ random(255)+ ',' + random(255)+ ',' + random(255)+')';
+    }
+    function colorChange(){
+        var color_val = randomColor();
+        document.getElementById("heading").style.color=color_val;
+    }
+    function colorChange2(){
+       document.getElementById("btn").style.backgroundColor=arr[j];
+       j++;
+    }
+</script>

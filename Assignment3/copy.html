@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var data = {     //object creation
+        name:"safiur",
+        age:22,
+        gender:"male",
+        woek:"aspiring mern stack developer"
+    }
+    var cpydata=data; //copy data object into cpydata;
+    Object.freeze(data); //freeze data no body can not modify the data object//cool thing
+    cpydata.name="Rahaman"; //modify data but it con't work 
+    console.log(data); //print the data object;
+    console.log(cpydata);//cpydata is unable to change the value of data
+
+</script>

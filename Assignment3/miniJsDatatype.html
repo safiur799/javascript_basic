@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #id{
+        font-size:20px;
+        color: black;
+    }
+    #showon{
+        display:flex;
+        font-size: 20px;
+        padding:5px;
+        
+    }
+    .class1{
+        flex-wrap: wrap;
+        border:1px solid black;
+        flex-direction: row;
+
+    }
+</style>
+<body>
+    <button onclick="colorChange()">Object</button>
+    <button onclick="arrayFunction()">Array</button>
+    <button onclick="func()">Function</button>
+    <button onclick="string()">String</button>
+    <button onclick="Numbers()">Numbers</button>
+    <button onclick="Null()">Null</button>
+    <button onclick="Undefined()">Undefined</button>
+    <div id="showon">
+    <div id="show" class="class1"></div>
+    <div id="show1"class="class1" ></div>
+    <div id="show2"class="class1"></div>
+    <div id="show3"class="class1"></div>
+    <div id="show4"class="class1"></div>
+    <div id="show5"class="class1"></div>
+    <div id="show6"class="class1"></div>
+    </div>
+
+
+</body>
+</html>
+<script>
+    function colorChange(){
+       var a= document.getElementById("show");
+       var p = document.createElement("p");
+       p.innerHTML="Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. The concept of objects in JavaScript can be understood with real life, tangible objects.";
+       var div = document.getElementById("show");
+       div.append(p);
+       
+}
+function arrayFunction() {
+    var a = document.getElementById("show1");
+    var p = document.createElement("p");
+    p.innerHTML = "Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can";
+    var div = document.getElementById("show");
+    div.appendChild(p);
+
+}
+ function func() {
+     var a = document.getElementById("show2");
+     var p = document.createElement("p");
+     p.innerHTML = "Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.";
+     var div = document.getElementById("show");
+     div.append(p);
+
+ }
+ function string(){
+     var a = document.getElementById("show3");
+     var p = document.createElement("p");
+     p.innerHTML = "Strings are useful for holding data that can be represented in text form. Some of the most-used operations on strings are to check their length, to build and concatenate them using the + and += string operators, checking for the existence or location of substrings with the indexOf() method, or extracting substrings with the substring() method.";
+     var div = document.getElementById("show");
+     div.append(p);
+
+ }
+ function Numbers() {
+     var a = document.getElementById("show4");
+     var p = document.createElement("p");
+     p.innerHTML = "Number is a primitive wrapper object used to represent and manipulate numbers like 37 or -9.25.The Number constructor contains constants and methods for working with numbers.Values of other types can be converted to numbers using the Number() function.";
+     var div = document.getElementById("show");
+     div.append(p);
+
+ }
+ function Null() {
+     var a = document.getElementById("show5");
+     var p = document.createElement("p");
+     p.innerHTML = "The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.";
+     var div = document.getElementById("show");
+     div.append(p);
+
+ }
+ function Undefined(){
+     var a = document.getElementById("show6");
+     var p = document.createElement("p");
+     p.innerHTML = "A variable that has not been assigned a value is of type undefined . A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned ";
+     var div = document.getElementById("show");
+     div.append(p);
+
+ }
+
+</script>
