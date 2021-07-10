@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .done {
+        text-decoration: line-through;
+        color: green;
+    }
+    #rightcorner{
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    
+</style>
+
+<body>
+    <h1>Todo List</h1>
+    <input type="text" id="inp">
+    <button onclick="addTask()">Add Task </button>
+    <div id="tasks"></div>
+
+    <div id="rigtcorner"></div>
+</body>
+
+</html>
+<script>
+    var tasks = document.getElementById("tasks");
+    var cor = document.getElementById("rightcorner");
+    var id = 0;
+    var id1=0;
+    function addTask() {
+        var div = document.createElement("div");
+        var task = document.getElementById("inp").value;
+        id = id + 1;
+        id1= id1+1;
+       
+        div.innerHTML = `<p id=${id}>${id}${task}</p><button onclick="Done(${id})">done</button><button onclick="remove(${id})">remove</button><p id="rightcorner">Total Number of task${id1}</p>`;
+        tasks.append(div);
+
+    }
+    function Done(i) {
+        var clicked_p = document.getElementById(i)
+        clicked_p.setAttribute("class", "done")
+        
+        
+
+    }
+       
+        function remove(i) {
+            var clicked_p = document.getElementById(i)
+
+            var div = clicked_p.parentElement;
+
+            div.remove();
+        }
+</script>

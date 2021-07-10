@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<title>Linus-Torvals</title>
+<style>
+    #torval {
+        margin: auto;
+        background-color: rgb(223, 222, 235);
+        height: 340px;
+        width: 400px;
+    }
+
+    #torimg {
+        height: 60px;
+        margin: auto;
+        padding: 20px;
+
+    }
+
+    #id1 {
+        color: blue;
+        text-align: center;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #id2 {
+        color: rgb(87, 80, 80);
+        text-align: center;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #id3 {
+        margin-top: 20px;
+        width: 1000px;
+        height: 200px;
+
+    }
+
+    #id4 {
+        margin-left: 50px;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: red;
+
+    }
+
+    #id5 {
+        text-align: center;
+        font-size: large;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #id10 {
+        background-color: rgb(247, 108, 9);
+        width: 1000px;
+        height: 150px;
+        margin: auto;
+    }
+
+    .last {
+        float: left;
+        margin: 30px;
+    }
+
+    .last1 {
+        float: right;
+        margin: 20px;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    #id11 {
+        background-color: black;
+        width: 8px;
+        height: 105px;
+    }
+
+    #id12 {
+        text-align: right;
+    }
+</style>
+
+<body>
+    <button onclick="createPage()">Create Page</button>
+    <div>
+        <div id="torval">
+            <div id="torimg" style = "height:60px"></div>
+            <div id="id1">
+                <h1></h1>
+            </div>
+            <div id="id2">
+                <h2></h2>
+            </div>
+        </div>
+
+        <div id="id3">
+            <div style="float: left;" id="sal"style="height:120px;width:90px;margin-left:200px;margin-top:30px">
+                    </div>
+            <div style="float: left; width: 700px;">
+                <div id="id4" style="text-align: center;">
+                    <h1></h1>
+                </div>
+                <div id="id5">
+                    <p style="text-align: center;margin:20px;display: flex;"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="id10">
+            <div class="last">
+                <div style="font-size: 30px;color: white;" id="id20"></div>
+                <div style="width:1px;height:50px"></div>
+                <div id="id30"
+                    style="text-align: center;font-style: normal;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                   </div>
+            </div>
+            <div id="id11" class="last"></div>
+            <div class="last1" id="id12">
+                <div style="font-size: 30px;color: white;"></div>
+                <div style="width:1px;height:50px"></div>
+                <div></div>
+                <div id="id40"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function createPage() {
+        var image=document.getElementById("torimg");
+        var img = document.createElement("img");
+        img.src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg";
+        image.append(img);
+
+        var h1 = document.createElement("h1");
+        var heading = document.getElementById("id1");
+        h1.innerHTML= "Linus Torvals";
+        heading.append(h1);
+
+        var h2 = document.createElement("h2");
+        var heading1 = document.getElementById("id2");
+        h2.innerHTML = "The creator of Linux & Git";
+        heading1.append(h2);
+
+        var image1 = document.getElementById("sal");
+        var img = document.createElement("img");
+        img.src = "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg";
+        image1.append(img);
+
+        var h3 = document.createElement("h3");
+        var heading2 = document.getElementById("id4");
+        h3.innerHTML = "Salman khan";
+        heading2.append(h3);
+        
+        var p = document.createElement("p");
+        var heading3 = document.getElementById("id5");
+        h3.innerHTML = "Salman Khan is the founder of the Khan Academy which has a mission of providing a free world - class education for anyone, anywhere";
+        heading3.append(h3);
+
+        var h2 = document.createElement("h2");
+        var heading4 = document.getElementById("id10");
+        h2.innerHTML = "Ken Thosmpson";
+        heading4.append(h2);
+
+        var div = document.createElement("div");
+        var heading5 = document.getElementById("id30");
+        div.innerHTML = " Designed and implemented the original Unix operating system";
+        heading5.append(div);
+
+        var div = document.createElement("div");
+        var heading6 = document.getElementById("id12");
+        div.innerHTML = "Dennis Ritchie";
+        heading5.append(div);
+
+        var div = document.createElement("div");
+        var heading7 = document.getElementById("id40");
+        div.innerHTML = "The creator of C Programming Language";
+        heading7.append(div);
+
+
+        
+
+
+    }
+
+</script>

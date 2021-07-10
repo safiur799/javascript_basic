@@ -22,7 +22,8 @@
 </style>
 <body id="bodyid">
     <div id="first">
-    <input type="submit" id="id1">
+        
+           <button  id="id1">submit</button>
     </div>
     
 </body>
@@ -40,10 +41,10 @@
             var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
         }
 
-   function btnColorChange(){
+   function chngColor(e){
         var color_val=switchColor();
         document.getElementById("id1").style.backgroundColor=color_val;
     }
-   btn.addEventListener('mouseover',btnColorChange);
+   btn.addEventListener('mouseover', chngColor);
 
 </script>
