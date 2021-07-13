@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //object protype
+    const inheritance = {
+        grandFatherName:"Abdul Hannan Sheik",
+        grandMotherName:"obeda bawwa",
+
+    }
+
+    const son = Object.create(inheritance);
+    son.father="Sukur Sheik";
+    const grandSon = Object.create(son);
+    grandSon.name="Safiur Rahaman";
+    grandSon.age =22;
+    console.log(grandSon);
+
+//construction protype chain explain
+    function family(){
+        this.name="Abdul Hannan Sheik";
+    }
+    const father = new family();
+    family.prototype.fatherFamily = function(){
+        this.name="Sukur Sheik";
+    }
+    family.prototype.sonFamily = function(){
+        this.name="Safiur Rahaman";
+    }
+    father.fatherFamily();
+    father.sonFamily();
+    console.log(father);
+
+</script>
