@@ -11,10 +11,14 @@
 </body>
 </html>
 <script>
+    //custom array function
     function myCustomArray(x){
         this.length=arguments.length;
+        for(let i=0; i<this.length; i++){
+            this[`${i}`]=arguments[i];
+        }
     }
-    const arr = new myCustomArray(1,2,3,4,5);
+    const arr = new myCustomArray(1,2,3,4,5); //creation custom array //arr is object //using new key word
     console.log(arr);
 
 
