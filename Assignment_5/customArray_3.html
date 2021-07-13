@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     //custom array function
+        function myCustomArray(x) {
+            this.length = arguments.length;
+            for (let i = 0; i < this.length; i++) {
+                this[`${i}`] = arguments[i];
+            }
+        }
+        const arr = new myCustomArray(1, 2, 3, 4, 5); //creation custom array //arr is object //using new key word
+        myCustomArray.prototype.পুশ = function(p){
+            let index = this.length;
+            this[index]=p;
+            index++;
+        }
+        myCustomArray.prototype.reverseArray = function(){   //reverseArray prototye of arr
+            let index=this.length;
+            let j=0;
+            while(index>j){                                 //this reversing array function
+                let temp =this[j];
+                this[j]=this[index];
+                this[index]=temp;
+                index--;
+                j++;
+            }
+        }
+        myCustomArray.prototype.pringFunction=function(){  //custom prototype pringFunction
+            let index=this.length;                       //getting the length of the object
+            for(let i=0; i<index; i++){
+                console.log(this[i]);
+            }
+        }
+        myCustomArray.prototype.firstElement = function(){
+            console.log("returning first element"+this[0]);  //returning first element of the array
+        }
+        arr.পুশ(100);
+        arr.reverseArray();
+        arr.pringFunction();
+        arr.firstElement();
+        console.log(arr);
+
+</script>
